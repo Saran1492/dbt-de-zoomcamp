@@ -19,7 +19,6 @@ models:
             tests:
                 - not_null:
                     severity: warn
-            casual = Paid with Credit Card.
           - name: started_at
             description: The date and time when the ride was started.
           - name: ended_at 
