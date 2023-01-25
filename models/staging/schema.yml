@@ -3,7 +3,7 @@ version: 2
 sources:
     - name: staging
       database: deproject-375711
-      schema: gh_archive_all
+      schema: divvy_trips_data
 
 
       tables:
