@@ -2,14 +2,14 @@ version: 2
 
 sources:
     - name: staging
-      database: dazzling-pier-338723
-      schema: trips_data_all_us
+      database: deproject-375711
+      schema: gh_archive_all
 
 
       tables:
-        - name: green_tripdata_external_table
-        - name: yellow_tripdata_external_table
-        - name: fhv_tripdata_external_table
+        - name: external_divvy_data
+        - name: divvy_data_partitioned
+        
 
 models:
     - name: stg_green_tripdata

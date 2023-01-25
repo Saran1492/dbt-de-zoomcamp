@@ -12,4 +12,4 @@ select
     cast(DOLocationID as integer) as dropoff_locationid,
     cast(SR_Flag as integer) as SR_Flag
 
-from  {{ source('staging','fhv_tripdata_external_table') }}
+from  {{ source('staging','external_divvy_data') }}
