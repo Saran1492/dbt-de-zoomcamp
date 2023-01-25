@@ -10,7 +10,7 @@ sources:
         - name: divvy_data_partitioned
 
 models:
-    - name: stg_dizzybike_tripdata
+    - name: stg_divvybike_tripdata
       description: >
         Trips made by bike share program, with 20,000 bikes and over 1,300 stations across Manhattan, 
         Brooklyn, Queens, the Bronx and Jersey City.
