@@ -16,52 +16,40 @@ models:
         Brooklyn, Queens, the Bronx and Jersey City.
         This data is provided according to the Citi Bike Data Use Policy.
       columns:
-          - name: ride_id
+          - name: trip_id
             description: Primary key for this table, generated with a concatenation of bikeid+starttime.
             tests:
                 - unique:
                     severity: warn
                 - not_null:
                     severity: warn
-          - name: bike_id 
+          - name: ride_id 
             description: Bike identifier.
-          - name: start_time
+          - name: started_at
             description: The date and time when the ride was started.
-          - name: stop_time 
+          - name: ended_at 
             description: The date and time when the ride was finished.
-          - name: trip_duration 
-            description: The time elapsed on the ride in seconds.
           - name: start_station_id
             description: Station number where the ride was started.
           - name: start_station_name
             description: Station name where the ride was started.
-          - name: start_station_latitude
+          - name: start_lat
             description: Latitude where the ride was started.
-          - name: start_station_longitude
+          - name: start_lng
             description: Longitude where the ride was started.
           - name: end_station_id
             description: Station number where the ride was finished.
           - name: end_station_name
             description: Station name where the ride was finished.
-          - name: end_station_latitude
+          - name: end_lat
             description: Latitude where the ride was finished.
-          - name: end_station_longitude
+          - name: end__lng
             description: Longitude where the ride was finished.
-          - name: user_type 
+          - name: member_casual 
             description: >
               A field describing the type of the service user.
               Customer = 24-hour pass or 3-day pass user;
               Subscriber = Annual Member.
-          - name: birth_year 
+          - name: rideable_type 
             description: >
-              A field describing the year when the user was born.
-          - name: gender_code 
-            description: >
-              A numeric code signifying the user gender.
-            tests: 
-              - accepted_values:
-                  values: "{{ var('gender_code_values') }}"
-                  severity: warn
-                  quote: false
-          - name: gender
-            description: Description of the gender_code
+              A field describing the type of the service user.    
