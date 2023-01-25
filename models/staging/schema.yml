@@ -19,9 +19,6 @@ models:
             tests:
                 - not_null:
                     severity: warn
-          - name: rideable_type 
-            description: indicator for rider is a member or paid with credit card.
-            member = Divvy Member;
             casual = Paid with Credit Card.
           - name: started_at
             description: The date and time when the ride was started.
